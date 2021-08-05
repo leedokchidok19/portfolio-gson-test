@@ -62,7 +62,7 @@ public class DataTestXmlExample1 {
 
 		rd.close();
 		conn.disconnect();
-		System.out.println(sb.toString());//json.toSting 데이터
+		System.out.println(sb.toString());//json.toString
 
 		//ParserConfigurationException, SAXException
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -73,8 +73,8 @@ public class DataTestXmlExample1 {
 		XPath xpath = xPathFactory.newXPath();
 
 		String[] rmList = {
-				  "citycode"	//찾을 파라미터 1
-				, "cityname"	//찾을 파라미터 2
+				  "parm1"	//찾을 파라미터 1
+				, "parm2"	//찾을 파라미터 2
 				};
 
 		for(String rm : rmList){
@@ -83,7 +83,7 @@ public class DataTestXmlExample1 {
 			XPathExpression expr = xpath.compile("//"+rm);
 			// XPath에서 XML 문서를 검색
 			Object result = expr.evaluate(document, XPathConstants.NODESET);
-			//찾을 노드가 
+			//rm의 node의 child 노드들을 포함한 목록 
 			NodeList nodes = (NodeList)result;
 
 			for(int i = 0; i < nodes.getLength(); i++){
