@@ -59,6 +59,6 @@ public class DBCreate {
 			return 0;
 		}
 
-	}//insert
+	}//doCreate
 
 }//DBCreate
