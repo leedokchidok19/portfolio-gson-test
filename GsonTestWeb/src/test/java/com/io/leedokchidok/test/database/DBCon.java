@@ -31,4 +31,4 @@ public class DBCon {
 		}
 	}//testConnection
 
-}//JDBCTests
+}//DBCon
